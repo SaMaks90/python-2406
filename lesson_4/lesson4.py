@@ -34,3 +34,36 @@ print(type(res_v2_2))
 res = calculus(1, 5)
 res2 = calculus(4, 6, 3)
 print(f'{res2} - {res} = {res2 - res}')
+
+# Mutable type (change object):
+print(f'Mutable type:')
+# - list
+a = (12, 13, 14)
+b = (1, 2, 3)
+id_first = id(a)
+a += b
+id_second = id(a)
+print(f'1. List type:\nFirst id: {id_first};\nSecond if: {id_second}')
+
+# - set
+a = set({12, 13})
+b = set({1, 2, 3, 5})
+id_first = id(a)
+a.update(b)
+print(a)
+id_second = id(a)
+print(f'2. Set type:\nFirst id: {id_first};\nSecond if: {id_second}')
+
+# - dict
+# a = {
+#     'first': 1
+# }
+# id_first = id(a)
+# b = {
+#     'second': 12
+# }
+#
+# a.update(b)
+# print(a)
+# id_second = id(a)
+# print(f'2. Dict type:\nFirst id: {id_first};\nSecond if: {id_second}')
